@@ -2,26 +2,34 @@ package com.edu.dev.springbootDemo;
 
 import org.springframework.boot.SpringApplication;
 
-import java.util.List;
+//import java.util.List;
 
-import org.springframework.boot.CommandLineRunner;
+//import org.springframework.boot.CommandLineRunner;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 //import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Bean;
 
-import com.edu.dev.springbootDemo.entities.mongoDb.Producto;
-import com.edu.dev.springbootDemo.repositories.ProductoRepository;
+//import com.edu.dev.springbootDemo.entities.mongoDb.Producto;
+//import com.edu.dev.springbootDemo.repositories.ProductoRepository;
 
 @SpringBootApplication
-public class SpringbootDemoApplication {
+public class SpringbootDemoApplication extends SpringBootServletInitializer {
+	
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(SpringbootDemoApplication.class);
+    }
+	
 
-	public static void main(String[] args) {
+	 public static void main(String[] args) {
 		SpringApplication.run(SpringbootDemoApplication.class, args);
 	}
 	
 	
-	
+	/*
 	@Bean
 	public CommandLineRunner productoDemo(ProductoRepository productoRepository) {
 		return (args) -> {
@@ -45,6 +53,6 @@ public class SpringbootDemoApplication {
 
 		};
 		
-	}
+	}*/
 
 }
