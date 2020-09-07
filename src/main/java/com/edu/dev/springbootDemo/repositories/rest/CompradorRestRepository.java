@@ -7,6 +7,6 @@ import com.edu.dev.springbootDemo.entities.jpa.Comprador;
 
 
 @RepositoryRestResource(collectionResourceRel = "compradores", path = "compradores")
-public interface CompradorRestRepository extends PagingAndSortingRepository<Comprador, Long>{
+public interface  CompradorRestRepository   extends PagingAndSortingRepository<Comprador, Long> {
 
 }

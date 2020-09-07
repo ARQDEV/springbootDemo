@@ -6,10 +6,13 @@ import java.math.BigDecimal;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
 @Document(collection = "products")
+
+
 public class Producto {
 	
-	@Id
+	 @Id
 	private String id;
 	
 
@@ -17,18 +20,18 @@ public class Producto {
 
 	private BigDecimal price;
 	
-	//private Double iva;
+	private Double iva;
 	
 	
 	
 	
-	/*public Double getIva() {
+	public Double getIva() {
 		return iva;
 	}
 
 	public void setIva(Double iva) {
 		this.iva = iva;
-	}*/
+	}
 
 	public Producto() {
 		super();

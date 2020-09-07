@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import com.edu.dev.springbootDemo.entities.mongoDb.Producto;
 
-@Repository
-public interface ProductoRepository extends CrudRepository <Producto,Long> {
+// @Repository
+public class  /* interface*/  ProductoRepository /* extends CrudRepository <Producto,Long> */  {
 
 
 	
